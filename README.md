@@ -15,7 +15,7 @@ The LSS-ROS2-Arms repository contains common packages that are used by both the 
 ## Prerequisites
 
 1. [Ubuntu 20.04.6 (Focal Fossa)](https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview)
-2. [ROS2 Iron (Desktop)](https://docs.ros.org/en/iron/Installation.html)
+2. [ROS2 Humble (Desktop)](https://docs.ros.org/en/humble/Installation.html)
 3. ROS2 dev tools:
 
 ```
@@ -30,7 +30,7 @@ rosdep update
 
 ```
 git clone https://github.com/Lynxmotion/LSS-ROS2-Arms.git
-git checkout iron
+git checkout humble
 mkdir -p src
 mv LSS-ROS2-Arms/* src
 mv src LSS-ROS2-Arms
@@ -40,7 +40,7 @@ mv src LSS-ROS2-Arms
 
 ```
 cd LSS-ROS2-Arms
-rosdep install --from-path src -yi --rosdistro iron
+rosdep install --from-path src -yi --rosdistro humble
 cd src
 vcs import < required.repos
 cd ..
@@ -49,7 +49,7 @@ cd ..
 ### Build instructions
 
 ```
-source /opt/ros/iron/setup.bash
+source /opt/ros/humble/setup.bash
 export GZ_VERSION=fortress
 colcon build --symlink-install
 ```
